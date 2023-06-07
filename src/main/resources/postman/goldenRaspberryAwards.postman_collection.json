@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "4af90fb7-22b0-463c-8df0-f4cb7b870b25",
+		"name": "goldenRaspberryAwards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FilmPremiosConsecutivosController",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/gustavo/Downloads/movielist.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/films/premios-consecutivos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"films",
+						"premios-consecutivos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FilmFetchController",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/gustavo/Downloads/movielist.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/films",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"films"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FilmFetchController {id}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/gustavo/Downloads/movielist.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/films/207",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"films",
+						"207"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FilmInsertController",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"year\": 2023,\n    \"title\": \"A volta dos que não foram\",\n    \"studios\": \"uau disnei\",\n    \"producers\": \"producer 1\",\n    \"winner\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/films",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"films"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FilmDeleteController",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"year\": 2023,\n    \"title\": \"A volta dos que não foram\",\n    \"studios\": \"uau disnei\",\n    \"producers\": \"Liz Atarashi\",\n    \"winner\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/films/208",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"films",
+						"208"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
